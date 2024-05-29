@@ -12,5 +12,4 @@ func TestRot14(t *testing.T) {
 		t.Errorf("Expected: ", expected)
 		t.Errorf("TestRot14 failed")
 	}
-
 }
