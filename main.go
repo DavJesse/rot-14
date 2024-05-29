@@ -7,6 +7,7 @@ import (
 func main() {
 	if len(os.Args) != 2 {
 		printLn("This program only takes one argument as input")
+		printLn("In the case of multiple words, encapsulate in double or single quotes")
 		return
 	}
 
