@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	if len(os.Args) != 2 {
@@ -10,5 +13,5 @@ func main() {
 
 	arg := os.Args[1]
 
-	
+	fmt.Println(arg)
 }

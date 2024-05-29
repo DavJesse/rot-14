@@ -8,8 +8,8 @@ func TestRot14(t *testing.T) {
 	expected := "opq"
 
 	if got != expected {
-		t.Errorf("Got: ", got)
-		t.Errorf("Expected: ", expected)
+		t.Errorf("Got: %s", got)
+		t.Errorf("Expected: %s", expected)
 		t.Errorf("TestRot14 failed")
 	}
 }
