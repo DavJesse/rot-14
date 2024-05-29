@@ -11,6 +11,7 @@ func rot14(str string) string {
 				if rot > 'z' {
 					rot -= 26
 					result += string(rot)
+					continue
 				}
 				result += string(rot)
 				continue
@@ -19,6 +20,7 @@ func rot14(str string) string {
 				if rot > 'Z' {
 					rot -= 26
 					result += string(rot)
+					continue
 				}
 				result += string(rot)
 				continue
