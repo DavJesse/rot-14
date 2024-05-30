@@ -5,15 +5,22 @@ import (
 )
 
 func main() {
-	if len(os.Args) != 2 {
+	var rotStr string
+	
+	if len(os.Args) != 3 {
 		printLn("This program only takes one argument as input")
-		printLn("In the case of multiple words, encapsulate in double or single quotes")
+		printLn("example1: $go run . --to-rot14 \"input string\"")
+		printLn("example2: $go run . --from-rot14 \"input string\"")
 		return
 	}
 
-	arg := os.Args[1]
+	arg := os.Args[1:3]
 
-	rotStr := rot14(arg)
+	if arg[0] == "--to-rot14" {
+		rotStr = toRot14(arg[1])
+	}
+
+	
 
 	printLn(rotStr)
 }

@@ -1,6 +1,6 @@
 package main
 
-func rot14(str string) string {
+func toRot14(str string) string {
 	var result string
 	var rot rune
 
@@ -30,4 +30,37 @@ func rot14(str string) string {
 		result += string(r)
 	}
 	return result
+}
+
+func fromRot14(str string) string {
+	var result string
+	var unRot rune
+
+	for _, r := range str {
+		if r >= 'a' && r <= 'z' || r >= 'A' && r <= 'Z' {
+			unRot = r - 14
+			if r >= 'a' && r <= 'z' {
+				if unRot < 'a' {
+					unRot -= 26
+					result += string(unRot)
+					continue
+				}
+				result += string(unRot)
+				continue
+			}
+			if r >= 'A' && r <= 'Z' {
+				if unRot < 'A' {
+					unRot -= 26
+					result += string(unRot)
+					continue
+				}
+				result += string(unRot)
+				continue
+			}
+
+		}
+		result += string(r)
+	}
+
+	return result	
 }

@@ -3,9 +3,9 @@ package main
 import "testing"
 
 func TestRot14(t *testing.T) {
-	testStr := "abc"
-	got := rot14(testStr)
-	expected := "opq"
+	testStr := "Hello! How are You?"
+	got := toRot14(testStr)
+	expected := "Vszzc! Vck ofs Mci?"
 
 	if got != expected {
 		t.Errorf("Got: %s", got)
