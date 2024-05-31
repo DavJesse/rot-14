@@ -16,7 +16,7 @@ func TestToRot14(t *testing.T) {
 
 func TestFromRot14(t *testing.T) {
 	testStr := "Vszzc! Vck ofs Mci?"
-	got := toRot14(testStr)
+	got := fromRot14(testStr)
 	expected := "Hello! How are You?"
 
 	if got != expected {

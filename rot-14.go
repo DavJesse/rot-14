@@ -41,7 +41,7 @@ func fromRot14(str string) string {
 			unRot = r - 14
 			if r >= 'a' && r <= 'z' {
 				if unRot < 'a' {
-					unRot -= 26
+					unRot += 26
 					result += string(unRot)
 					continue
 				}
@@ -50,7 +50,7 @@ func fromRot14(str string) string {
 			}
 			if r >= 'A' && r <= 'Z' {
 				if unRot < 'A' {
-					unRot -= 26
+					unRot += 26
 					result += string(unRot)
 					continue
 				}
@@ -62,5 +62,5 @@ func fromRot14(str string) string {
 		result += string(r)
 	}
 
-	return result	
+	return result
 }

@@ -6,7 +6,7 @@ import (
 
 func main() {
 	var rotStr string
-	
+
 	if len(os.Args) != 3 {
 		printLn("This program only takes one argument as input")
 		printLn("example1: $go run . --to-rot14 \"input string\"")
@@ -19,8 +19,6 @@ func main() {
 	if arg[0] == "--to-rot14" {
 		rotStr = toRot14(arg[1])
 	}
-
-	
 
 	printLn(rotStr)
 }
