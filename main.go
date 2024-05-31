@@ -18,6 +18,8 @@ func main() {
 
 	if arg[0] == "--to-rot14" {
 		rotStr = toRot14(arg[1])
+	} else if arg[1] == "--to-rot14" {
+
 	}
 
 	printLn(rotStr)
