@@ -8,7 +8,6 @@ func stringContains(str, subStr string) bool {
 			status = true
 			break
 		}
-
 	}
 	return status
 }

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 )
 
@@ -17,14 +18,16 @@ func main() {
 	}
 
 	arg := os.Args[1:3]
+	fmt.Println(arg)
 
-	if stringContains(arg[0], "-rot14") {
+	if stringContains(arg[0], "rot14") {
 		flag = arg[0]
 		inputStr = arg[1]
-		if stringContains(flag, "to") {
+		if flag == "--to-rot14" {
 			rotStr = toRot14(inputStr)
 		}
-	} else if stringContains(arg[1], "-rot14") {
+	} else if stringContains(arg[1], "rot14") {
+		printLn("yes")
 		flag = arg[1]
 		inputStr = arg[0]
 		if stringContains(flag, "from") {
