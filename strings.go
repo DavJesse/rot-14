@@ -1,16 +1,19 @@
 package main
 
 func stringContains(str, subStr string) bool {
-	if len(str) < len(subStr) {
+	lenStr := len(str)
+	lenSubStr := len(subStr)
+
+	if lenStr < lenSubStr {
 		return false
 	}
 
-	for i := 0; i < len(str); i++ {
-		if i + len(subStr) <= len(str) {
-			if str[i:i+len(subStr)] == subStr {
+	for i := 0; i < lenStr; i++ {
+		j := i + lenSubStr
+
+		if j <= lenStr && str[i:j] == subStr {
 				return true
 			}
-		}
 	}
 	return false
 }
