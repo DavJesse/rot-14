@@ -45,8 +45,8 @@ func main() {
 
 	} else {
 		printLn("Please include a '--to-rot14' or '--from-rot14' flag alongside your input string")
-		printLn("Ex. \"go run . --to-rot14 \"Your input string\"")
-		printLn("Ex. \"go run . --from-rot14 \"Your input string\"")
+		printLn("example1. \"go run . --to-rot14 \"Your input string\"")
+		printLn("example2. \"go run . --from-rot14 \"Your input string\"")
 		return
 	}
 
