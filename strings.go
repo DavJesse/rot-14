@@ -11,7 +11,6 @@ func stringContains(str, subStr string) bool {
 				return true
 			}
 		}
-		break
 	}
 	return false
 }
