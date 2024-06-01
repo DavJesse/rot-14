@@ -6,9 +6,12 @@ func stringContains(str, subStr string) bool {
 	}
 
 	for i := 0; i < len(str); i++ {
-		if str[i:i+len(subStr)] == subStr {
-			return true
+		if i + len(subStr) <= len(str) {
+			if str[i:i+len(subStr)] == subStr {
+				return true
+			}
 		}
+		break
 	}
 	return false
 }

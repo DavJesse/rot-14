@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -18,20 +17,30 @@ func main() {
 	}
 
 	arg := os.Args[1:3]
-	fmt.Println(arg)
 
 	if stringContains(arg[0], "rot14") {
 		flag = arg[0]
 		inputStr = arg[1]
 		if flag == "--to-rot14" {
 			rotStr = toRot14(inputStr)
+		} else if flag == "--from-rot14" {
+			rotStr = fromRot14(inputStr)
+		} else {
+			printLn("Format Error")
+			printLn(flag + " is not a valid flag")
+			return
 		}
 	} else if stringContains(arg[1], "rot14") {
-		printLn("yes")
 		flag = arg[1]
 		inputStr = arg[0]
-		if stringContains(flag, "from") {
+		if flag == "--from-rot14" {
 			rotStr = fromRot14(inputStr)
+		} else if flag == "--to-rot14" {
+			rotStr = toRot14(inputStr)
+		} else {
+			printLn("Format Error")
+			printLn(flag + " is not a valid flag")
+			return
 		}
 
 	} else {
