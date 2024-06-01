@@ -1,13 +1,14 @@
 package main
 
 func stringContains(str, subStr string) bool {
-	var status bool
+	if len(str) < len(subStr) {
+		return false
+	}
 
 	for i := 0; i < len(str); i++ {
 		if str[i:i+len(subStr)] == subStr {
-			status = true
-			break
+			return true
 		}
 	}
-	return status
+	return false
 }
