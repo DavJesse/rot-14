@@ -2,7 +2,6 @@ package main
 
 import "testing"
 
-// TestStringContains tests the stringContains function.
 func TestStringContains(t *testing.T) {
 	// Define test input values
 	testStr1, testSubStr := "Contains", "ins"
