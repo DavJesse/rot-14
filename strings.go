@@ -12,8 +12,8 @@ func stringContains(str, subStr string) bool {
 		j := i + lenSubStr
 
 		if j <= lenStr && str[i:j] == subStr {
-				return true
-			}
+			return true
+		}
 	}
 	return false
 }

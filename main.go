@@ -26,7 +26,7 @@ func main() {
 		} else if flag == "--from-rot14" {
 			rotStr = fromRot14(inputStr)
 		} else {
-			printLn("Format Error")
+			printLn("Format Error!")
 			printLn(flag + " is not a valid flag")
 			return
 		}
